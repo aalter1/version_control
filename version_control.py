@@ -1,3 +1,5 @@
+# This is Adan Alter
+
 # function to encode 8 digit string
 def encode(string):
     string_list = list(string)
