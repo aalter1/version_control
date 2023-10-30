@@ -13,6 +13,23 @@ def encode(string):
     return return_to_string
 
 
+# function to decode 8 digit string
+# added by Jack Hernandez
+def decode(encoded_password):
+    # declare variable
+    decoded_password = ""
+
+    # decoding algorithm
+    for char in encoded_password:
+        # for characters 0-2, adding 7 gets the correct character
+        if int(char) < 3:
+            decoded_password += str(int(char) + 7)
+        # for characters 3-9, subtracting 3 gives the correct character
+        else:
+            decoded_password += str(int(char) - 3)
+    return decoded_password
+
+
 # Menu and options that repeat until quitting
 def main():
     encode_program = True
